@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+# This prints a string into an upper case string
+
+
 def uppercase(str):
     for i in str:
         if ord(i) >= 97 and ord(i) <= 122:

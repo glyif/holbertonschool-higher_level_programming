@@ -15,26 +15,27 @@ if __name__ == "__main__":
     def print_result(a, op, b, result):
         print("{:d} {:s} {:d} = {:d}".format(a, op, b, result))
 
+    router = {
+            '+': calculator_1.add,
+            '-': calculator_1.sub,
+            '*': calculator_1.mul,
+            '/': calculator_1.div
+            }
+
+
     argc = len(sys.argv)
 
-    if argc < 3:
+    if argc <= 3:
         print_error(1)
 
     a = int(sys.argv[1])
     b = int(sys.argv[3])
     op = sys.argv[2]
 
-    if op == '+':
-        result = calculator_1.add(a, b)
-        print_result(a, op, b, result)
-    elif op == '-':
-        result = calculator_1.sub(a, b)
-        print_result(a, op, b, result)
-    elif op == '*':
-        result = calculator_1.mul(a, b)
-        print_result(a, op, b, result)
-    elif op == '/':
-        result = calculator_1.div(a, b)
-        print_result(a, op, b, result)
-    else:
-        print_error(2)
+    for key in router:
+        if op == key:
+            result = router[op](a, b)
+            print_result(a, op, b, result)
+            sys.exit(0)
+
+    print_error(2)

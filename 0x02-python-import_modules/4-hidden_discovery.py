@@ -6,4 +6,3 @@ if __name__ == "__main__":
     for mod in modules:
         if mod[0] != '_':
             print("{:s}".format(mod))
-

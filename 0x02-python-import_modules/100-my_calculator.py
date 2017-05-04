@@ -22,7 +22,6 @@ if __name__ == "__main__":
             '/': calculator_1.div
             }
 
-
     argc = len(sys.argv)
 
     if argc <= 3:

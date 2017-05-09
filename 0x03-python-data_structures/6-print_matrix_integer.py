@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
     string = ''
-    for list in matrix:
+    for lists in matrix:
         string += "\n"
-        for element in row:
+        for element in lists:
             string += "{:d} ".format(element)
         string = string[:-1]
 

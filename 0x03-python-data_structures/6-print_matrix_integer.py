@@ -8,6 +8,9 @@ def print_list(matrix_list=[]):
 
 
 def print_matrix_integer(matrix=[[]]):
+    if(len(matrix) == 0 or matrix is None):
+        return matrix
+
     for list in matrix:
         i = 0
         new_list = []

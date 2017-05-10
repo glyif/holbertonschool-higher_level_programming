@@ -2,6 +2,8 @@
 def divisible_by_2(my_list=[]):
     if my_list is None:
         return
+    if len(my_list) == 0:
+        return
 
     new_list = list(my_list)
 

@@ -7,10 +7,11 @@ def divisible_by_2(my_list=[]):
 
     new_list = list(my_list)
 
+    i = 0
     for element in my_list:
         if element % 2 == 0:
-            new_list[element] = True
+            new_list[i] = True
         else:
-            new_list[element] = False
-
-    return (new_list)
+            new_list[i] = False
+        i = i + 1
+    return(new_list)

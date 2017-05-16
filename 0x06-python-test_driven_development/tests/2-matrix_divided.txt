@@ -1,0 +1,72 @@
+The ``1-matrix_divided`` module
+===============================
+
+Using ``matrix_divided``
+-------------------------------
+
+This is a test file for ``matrix_divided``.
+First import ``matrix_divided`` from ``1-matrix_divided`` module.
+
+>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+Now Tests:
+
+Base Case:
+>>> matrix = [[1, 2, 3],[4, 5, 6]]
+>>> matrix_divided(matrix, 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+---------------------------------------
+
+Div value (bool):
+>>> matrix = [[1, 2, 3],[4, 5, 6]]
+>>> matrix_divided(matrix, True)
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+---------------------------------------
+
+Invalid Div value (zero):
+>>> matrix = [[1, 2, 3],[4, 5, 6]]
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+
+----------------------------------------
+
+None passed in as matrix:
+>>> matrix = [[1, 2, 3],[4, 5, 6]]
+>>> matrix_divided(None, 3)
+Traceback (most recent call last):
+...
+TypeError: 'NoneType' object is not subscriptable
+
+----------------------------------------
+
+None passed in as Div:
+>>> matrix = [[1, 2, 3],[4, 5, 6]]
+>>> matrix_divided(matrix, None)
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+----------------------------------------
+Invalid Matrix Row Length:
+>>> matrix = [[1, 2, 3, 5],[4, 5, 6]]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+
+----------------------------------------------------------
+
+Invalid Matrix Data:
+>>> matrix = [[1, 2, False],["string", 3, True]]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+----------------------------------------------------------------------
+
+

@@ -1,0 +1,28 @@
+The ``Square`` module
+=====================
+
+Using ``Square`` class
+----------------------
+
+First, import ``Square`` class
+>>> Square = __import__('4-square').Square
+
+Tests
+--------
+
+>>> my_square = Square(3)
+>>> print(type(my_square))
+<class '4-square.Square'>
+
+>>> my_square = Square(7)
+>>> print(my_square.area())
+49
+
+>>> my_square = Square()
+>>> print(my_square.size)
+0
+
+>>> my_square.size = "5"
+Traceback (most recent call last):
+...
+TypeError: size must be an integer

@@ -4,6 +4,7 @@ Square Module:
 defines a square
 """
 
+
 class Square:
     """
     Square class:

@@ -4,6 +4,7 @@ Square Module:
 defines a square
 """
 
+
 class Square:
     """
     Square class:
@@ -70,6 +71,7 @@ class Square:
         """
         prints the square
         """
-        matrix = [' ' * self.__position[0] + '#' * self.__size for i in range(0, self.__size)]
+        matrix = [' ' * self.__position[0] + '#' * self.__size
+                  for i in range(0, self.__size)]
         print("{:s}".format('\n' * self.__position[1]), end="")
         print("{:s}".format('\n'.join(matrix)))

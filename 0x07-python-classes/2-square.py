@@ -4,6 +4,7 @@ Square Module:
 defines a square
 """
 
+
 class Square:
     """
     Square class:
@@ -21,4 +22,3 @@ class Square:
             raise ValueError("size must be >= 0")
 
         self.__size = size
-

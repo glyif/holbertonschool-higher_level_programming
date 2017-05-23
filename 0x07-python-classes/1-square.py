@@ -4,6 +4,7 @@ Square Module:
 defines a square
 """
 
+
 class Square:
     """
     Square class:
@@ -15,4 +16,3 @@ class Square:
         initializes the size of the square
         """
         self.__size = size
-

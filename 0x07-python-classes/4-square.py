@@ -15,7 +15,7 @@ class Square:
         __init__:
         initializes the size of the square
         """
-        self.__size = size
+        self.size = size
 
     @property
     def size(self):
@@ -25,17 +25,17 @@ class Square:
         return (self.__size)
 
     @size.setter
-    def size(self, value):
+    def size(self, size):
         """
         setting value to self
         """
-        if not isinstance(value, int):
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
 
-        if value < 0:
+        if size < 0:
             raise ValueError("size must be >= 0")
 
-        self.__size = value
+        self.__size = size
 
     def area(self):
         """

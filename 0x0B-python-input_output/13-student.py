@@ -40,7 +40,7 @@ class Student:
     def reload_from_json(self, json):
         """
         reload_from_json - replaces all attrs with json
-        
+
         Args:
         @self: self
         @json: json to replace attrs

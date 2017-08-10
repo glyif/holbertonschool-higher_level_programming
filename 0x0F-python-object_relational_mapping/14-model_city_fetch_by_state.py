@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
 
-import sys 
+import sys
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -14,6 +15,6 @@ if __name__ == "__main__":
     Session = sessionmaker(engine)
     session = Session()
 
-    for city, state in session.query(City, State).\
-		join(State).order_by(City.id):
-        print("{:s}: ({:d}) {:s}".format(state.name, city.id, city.name))    
+    for city, state in session.query(City, State). \
+            join(State).order_by(City.id):
+        print("{:s}: ({:d}) {:s}".format(state.name, city.id, city.name))

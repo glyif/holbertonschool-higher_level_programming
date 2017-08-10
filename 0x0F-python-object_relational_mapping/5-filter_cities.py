@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+filter cities
+"""
 import sys
 
 import MySQLdb

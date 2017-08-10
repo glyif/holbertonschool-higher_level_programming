@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+fetches cities and state
+"""
 
 
 import sys

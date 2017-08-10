@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+deletes state
+"""
 
 import sys
 

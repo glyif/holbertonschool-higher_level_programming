@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+mysqldb cities and states
+"""
 import sys
 
 import MySQLdb

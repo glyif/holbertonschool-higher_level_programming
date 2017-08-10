@@ -1,4 +1,8 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
+"""
+mysqldb select states
+"""
+>>>>>>> bb19fd5f1914ad25922b85aff5072be16e32f5e2
 import sys
 
 import MySQLdb

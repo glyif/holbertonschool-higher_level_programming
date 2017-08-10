@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+mysqldb no injection filter states
+"""
 import sys
 
 import MySQLdb
@@ -37,6 +40,6 @@ def db_query(db, query):
 
 if __name__ == "__main__":
     db = db_connection(sys.argv[1], sys.argv[2], sys.argv[3])
-    db_query(db, "SELECT id, name FROM states
-             WHERE name='{:s}' ORDER BY states.id ASC".format(
+    db_query(db, """SELECT id, name FROM states
+             WHERE name='{:s}' ORDER BY states.id ASC""".format(
                  sys.argv[4].split(' ')[0].split(';')[0]))

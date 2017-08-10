@@ -16,5 +16,8 @@ if __name__ == "__main__":
 
     for state in session.query(State).order_by(State.id):
         print("{:d}: {:s}".format(state.id, state.name))
-        for city in session.query(City).join(State).filter(City.state_id == state.id).order_by(City.id):
+        for city in session.query(City). \
+                join(State). \
+                filter(City.state_id == state.id). \
+                order_by(City.id):
             print("\t{:d}: {:s}".format(city.id, city.name))

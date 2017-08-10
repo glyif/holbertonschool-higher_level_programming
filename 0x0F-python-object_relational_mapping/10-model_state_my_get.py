@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+query db with arg
+"""
 
 
 import sys

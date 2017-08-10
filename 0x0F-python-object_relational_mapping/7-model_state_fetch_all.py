@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+fetch all cities
+"""
 
 import sys
 

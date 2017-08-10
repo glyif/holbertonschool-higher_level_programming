@@ -37,5 +37,5 @@ def db_query(db, query):
 
 if __name__ == "__main__":
     db = db_connection(sys.argv[1], sys.argv[2], sys.argv[3])
-    db_query(db, "SELECT id, name FROM states
-             WHERE name='{:s}' ORDER BY states.id ASC".format(sys.argv[4]))
+    db_query(db, """SELECT id, name FROM states
+             WHERE name='{:s}' ORDER BY states.id ASC""".format(sys.argv[4]))

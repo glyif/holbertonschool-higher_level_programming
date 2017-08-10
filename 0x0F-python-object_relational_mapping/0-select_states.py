@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+mysqldb select states
+"""
 import sys
 
 import MySQLdb

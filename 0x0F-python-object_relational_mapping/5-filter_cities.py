@@ -12,9 +12,10 @@ def db_query(db, query):
     cur.execute(query)
     data = cur.fetchall()
 
-    for row in data:
-        print(row)
+    print(", ".join(row[0] for row in data))
 
 if __name__ == "__main__":
     db = db_connection(sys.argv[1], sys.argv[2], sys.argv[3])
-    db_query(db, "SELECT id, name FROM states ORDER BY states.id ASC")
+    db_query(db, """SELECT cities.name FROM cities
+    INNER JOIN states
+    WHERE states.id = cities.state_id AND states.name = '{:s}'""".format(sys.argv[4].split(' ')[0].split(';')[0]))

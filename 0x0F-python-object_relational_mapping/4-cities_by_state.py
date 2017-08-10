@@ -17,4 +17,6 @@ def db_query(db, query):
 
 if __name__ == "__main__":
     db = db_connection(sys.argv[1], sys.argv[2], sys.argv[3])
-    db_query(db, "SELECT id, name FROM states ORDER BY states.id ASC")
+    db_query(db, """SELECT cities.id, cities.name, states.name FROM cities
+    INNER JOIN states WHERE states.id = cities.state_id
+    ORDER BY cities.id ASC""")

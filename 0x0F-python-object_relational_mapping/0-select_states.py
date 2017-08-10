@@ -16,7 +16,8 @@ def db_connection(user_name, password, db_name, host="localhost"):
     db = MySQLdb.connect(host=host,
                          user=user_name,
                          passwd=password,
-                         db=db_name)
+                         db=db_name,
+                         port=3306)
     return db
 
 

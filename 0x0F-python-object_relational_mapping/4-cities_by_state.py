@@ -13,7 +13,10 @@ def db_connection(user_name, password, db_name, host="localhost"):
     :param host: host - default to localhost
     :return: db
     """
-    db = MySQLdb.connect(host=host, user=user_name, passwd=password, db=db_name)
+    db = MySQLdb.connect(host=host,
+                         user=user_name,
+                         passwd=password,
+                         db=db_name)
     return db
 
 

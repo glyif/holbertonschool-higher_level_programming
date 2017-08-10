@@ -13,7 +13,10 @@ def db_connection(user_name, password, db_name, host="localhost"):
     :param host: host - default to localhost
     :return: db
     """
-    db = MySQLdb.connect(host=host, user=user_name, passwd=password, db=db_name)
+    db = MySQLdb.connect(host=host,
+                         user=user_name,
+                         passwd=password,
+                         db=db_name)
     return db
 
 
@@ -35,4 +38,5 @@ if __name__ == "__main__":
     db = db_connection(sys.argv[1], sys.argv[2], sys.argv[3])
     db_query(db, """SELECT cities.name FROM cities
     INNER JOIN states
-    WHERE states.id = cities.state_id AND states.name = '{:s}'""".format(sys.argv[4].split(' ')[0].split(';')[0]))
+    WHERE states.id=cities.state_id AND states.name = '{:s}'""".format(
+        sys.argv[4].split(' ')[0].split(';')[0]))

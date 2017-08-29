@@ -4,7 +4,7 @@ error handling
 """
 
 import urllib.request
-import urllib.HTTPError
+import urllib.error
 from sys import argv
 
 

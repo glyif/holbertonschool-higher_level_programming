@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     count = response.get("count")
 
-    print("Number of result: {}".format(count))
+    print("Number of results: {}".format(count))
 
     results = response.get("results")
 

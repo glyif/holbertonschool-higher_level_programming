@@ -4,9 +4,9 @@
 let tryInt = parseInt(process.argv[2]);
 
 if (isNaN(tryInt)) {
-  console.log('Missing number of occurrences');
+  console.log('Missing size');
 } else {
   for (let i = 0; i < tryInt; i++) {
-    console.log('#'.repeat(tryInt));
+    console.log('X'.repeat(tryInt));
   }
 }

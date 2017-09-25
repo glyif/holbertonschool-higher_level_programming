@@ -2,12 +2,13 @@
 // rectangle class
 
 function Rectangle (w, h) {
-  if (w > 0 && h > 0) {
+  if (parseInt(w) > 0 && parseInt(h) > 0) {
     this.width = w;
     this.height = h;
+
     this.print = function () {
       for (let i = 0; i < this.height; i++) {
-        console.log('X'.repeat(this.width));
+        console.log('X'.repeat(parseInt(this.width)));
       }
     };
 
@@ -16,8 +17,8 @@ function Rectangle (w, h) {
     };
 
     this.double = function () {
-      this.width = this.width * 2;
-      this.height = this.width * 2;
+      this.width *= 2;
+      this.height *= 2;
     };
   }
 }

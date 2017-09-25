@@ -10,7 +10,7 @@ function Rectangle (w, h) {
 
 Rectangle.prototype.print = function () {
   for (let i = 0; i < this.height; i++) {
-    console.log('#'.repeat(this.width));
+    console.log('X'.repeat(this.width));
   }
 };
 

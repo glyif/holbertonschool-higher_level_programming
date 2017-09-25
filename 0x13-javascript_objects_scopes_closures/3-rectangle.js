@@ -7,7 +7,7 @@ function Rectangle (w, h) {
     this.height = h;
   }
 
-  this.print = () => {
+  this.print = function () {
     for (let i = 0; i < this.height; i++) {
       console.log('#'.repeat(this.width));
     }

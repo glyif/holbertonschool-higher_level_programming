@@ -7,17 +7,17 @@ function Rectangle (w, h) {
     this.height = h;
   }
 
-  this.print = () => {
+  this.print = function () {
     for (let i = 0; i < this.height; i++) {
       console.log('#'.repeat(this.width));
     }
   };
 
-  this.rotate = () => {
+  this.rotate = function () {
     this.width = [this.height, this.height = this.width][0];
   };
 
-  this.double = () => {
+  this.double = function () {
     this.width = this.width * 2;
     this.height = this.width * 2;
   };

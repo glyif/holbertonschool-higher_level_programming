@@ -6,12 +6,12 @@ function Rectangle (w, h) {
     this.width = w;
     this.height = h;
   }
-
-  this.print = function () {
-    for (let i = 0; i < this.height; i++) {
-      console.log('#'.repeat(this.width));
-    }
-  };
 }
+
+Rectangle.prototype.print = function () {
+  for (let i = 0; i < this.height; i++) {
+    console.log('#'.repeat(this.width));
+  }
+};
 
 module.exports = {Rectangle};

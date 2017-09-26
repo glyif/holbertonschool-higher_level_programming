@@ -16,11 +16,11 @@ request(url, function (err, response, body) {
   let resp = JSON.parse(body);
 
   for (let i = 0; i < resp.length; i++) {
-    if (resp[i]['completed'] === true) {
-      if (resp[i]['userId'] in userCompletedTasks) {
-        userCompletedTasks[resp[i]['userId']] += 1;
+    if (resp[i].completed === true) {
+      if (resp[i].userId in userCompletedTasks) {
+        userCompletedTasks[resp[i].userId] += 1;
       } else {
-        userCompletedTasks[resp[i]['userId']] = 1;
+        userCompletedTasks[resp[i].userId] = 1;
       }
     }
   }

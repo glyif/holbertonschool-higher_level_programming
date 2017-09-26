@@ -3,7 +3,7 @@
 let counter = 0;
 
 function logMe (string) {
-  console.log(counter + ": " + string);
+  console.log(counter + ': ' + string);
   counter++;
 }
 

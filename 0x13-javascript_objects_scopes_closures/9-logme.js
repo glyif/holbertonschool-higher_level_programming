@@ -3,8 +3,8 @@
 let counter = 0;
 
 function logMe (string) {
+  console.log(counter + ": " + string);
   counter++;
-  console.log('%d: %s', counter, string);
 }
 
 module.exports = {logMe};
